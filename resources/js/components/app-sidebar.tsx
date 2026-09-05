@@ -1,4 +1,4 @@
-import { Link, usePage } from '@inertiajs/react';
+﻿import { Link, usePage } from '@inertiajs/react';
 import {
     Box,
     CircleDollarSign,
@@ -34,8 +34,6 @@ import {
     SidebarMenu,
     SidebarMenuButton,
     SidebarMenuItem,
-    SidebarGroup,
-    SidebarGroupLabel,
 } from '@/components/ui/sidebar';
 import type { NavItem } from '@/types';
 
@@ -162,36 +160,12 @@ export function AppSidebar() {
 
             <SidebarContent>
                 <NavMain items={mainNavItems} />
-
-                <SidebarGroup>
-                    <SidebarGroupLabel>Master Data</SidebarGroupLabel>
-                    <NavMain items={masterDataItems} />
-                </SidebarGroup>
-
-                <SidebarGroup>
-                    <SidebarGroupLabel>Inventori</SidebarGroupLabel>
-                    <NavMain items={inventoryItems} />
-                </SidebarGroup>
-
-                <SidebarGroup>
-                    <SidebarGroupLabel>Manufaktur</SidebarGroupLabel>
-                    <NavMain items={manufacturingItems} />
-                </SidebarGroup>
-
-                <SidebarGroup>
-                    <SidebarGroupLabel>Penjualan</SidebarGroupLabel>
-                    <NavMain items={salesItems} />
-                </SidebarGroup>
-
-                <SidebarGroup>
-                    <SidebarGroupLabel>Keuangan</SidebarGroupLabel>
-                    <NavMain items={financeItems} />
-                </SidebarGroup>
-
-                <SidebarGroup>
-                    <SidebarGroupLabel>Admin</SidebarGroupLabel>
-                    <NavMain items={adminItems} />
-                </SidebarGroup>
+                <NavMain label="Master Data" items={masterDataItems} />
+                <NavMain label="Inventori" items={inventoryItems} />
+                <NavMain label="Manufaktur" items={manufacturingItems} />
+                <NavMain label="Penjualan" items={salesItems} />
+                <NavMain label="Keuangan" items={financeItems} />
+                <NavMain label="Admin" items={adminItems} />
             </SidebarContent>
 
             <SidebarFooter>
